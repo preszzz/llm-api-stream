@@ -2,23 +2,23 @@
 
 # dependencies
 /node_modules
-/.pnp
-.pnp.js
 
-# testing
-/coverage
+# Yarn
+.pnp.*
+.yarn
 
 # next.js
 /.next/
 /out/
 
 # python
-venv/
+.venv/
 .env
 __pycache__
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store

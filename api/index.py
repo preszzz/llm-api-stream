@@ -9,11 +9,21 @@ from fastapi.responses import StreamingResponse
 from openai import OpenAI
 from .utils.prompt import ClientMessage, convert_to_openai_messages
 from .utils.tools import get_current_weather
+from fastapi.middleware.cors import CORSMiddleware
 
 
 load_dotenv(".env.local")
 
 app = FastAPI()
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 client = OpenAI(
     api_key=os.environ.get("OPENAI_API_KEY"),
@@ -151,3 +161,7 @@ async def handle_chat_data(request: Request, protocol: str = Query('data')):
     response = StreamingResponse(stream_text(openai_messages, protocol))
     response.headers['x-vercel-ai-data-stream'] = 'v1'
     return response
+
+@app.get("/api/hello")
+async def hello():
+    return {"message": "Hello from FastAPI!"}
