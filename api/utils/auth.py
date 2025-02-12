@@ -2,7 +2,7 @@ from fastapi import HTTPException, Header
 from typing import Optional
 import os
 from dotenv import load_dotenv
-from app.utils.logger import logger
+from api.utils.logger import logger
 
 # 加载 .env 文件
 logger.info(f"当前工作目录: {os.getcwd()}")

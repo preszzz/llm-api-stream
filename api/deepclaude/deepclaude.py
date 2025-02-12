@@ -4,8 +4,8 @@ import time
 import tiktoken
 import asyncio
 from typing import AsyncGenerator
-from app.utils.logger import logger
-from app.clients import DeepSeekClient, ClaudeClient
+from api.utils.logger import logger
+from api.clients import DeepSeekClient, ClaudeClient
 
 
 class DeepClaude:

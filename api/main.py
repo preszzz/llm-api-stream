@@ -8,9 +8,9 @@ load_dotenv()
 from fastapi import FastAPI, Depends, Request
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
-from app.utils.logger import logger
-from app.utils.auth import verify_api_key
-from app.deepclaude.deepclaude import DeepClaude
+from api.utils.logger import logger
+from api.utils.auth import verify_api_key
+from api.deepclaude.deepclaude import DeepClaude
 
 app = FastAPI(title="DeepClaude API")
 

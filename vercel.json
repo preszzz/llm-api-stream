@@ -1,8 +1,8 @@
 {
   "version": 2,
   "functions": {
-    "app/**": {
-      "excludeFiles": "{.next,.api,.git,node_modules}/**"
+    "api/**": {
+      "excludeFiles": "{.next,.git,node_modules}/**"
     }
   },
   "routes": [

@@ -1,7 +1,7 @@
 """基础客户端类，定义通用接口"""
 from typing import AsyncGenerator, Any
 import aiohttp
-from app.utils.logger import logger
+from api.utils.logger import logger
 from abc import ABC, abstractmethod
 
 

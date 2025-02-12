@@ -1,7 +1,7 @@
 """Claude API 客户端"""
 import json
 from typing import AsyncGenerator
-from app.utils.logger import logger
+from api.utils.logger import logger
 from .base_client import BaseClient
 
 
