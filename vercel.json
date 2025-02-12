@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "installCommand": "pip install uv && uv sync",
   "builds": [
     {
       "src": "main.py",
