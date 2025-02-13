@@ -17,7 +17,7 @@ if not ALLOW_API_KEY:
     raise ValueError("ALLOW_API_KEY environment variable is not set")
 
 # 打印API密钥的前4位用于调试
-logger.info(f"Loaded API key starting with: {ALLOW_API_KEY[:4] if len(ALLOW_API_KEY) >= 4 else ALLOW_API_KEY}")
+logger.info(f"Loaded API key starting with: {ALLOW_API_KEY[:5] if len(ALLOW_API_KEY) >= 5 else ALLOW_API_KEY}")
 
 
 async def verify_api_key(authorization: Optional[str] = Header(None)) -> None:
