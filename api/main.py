@@ -10,11 +10,9 @@ from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 from api.utils.logger import logger
 from api.utils.auth import verify_api_key
-from api.utils.static import static_files
 from api.deepclaude.deepclaude import DeepClaude
 
 app = FastAPI(title="DeepClaude API")
-static_files(app)
 # 从环境变量获取 CORS配置, API 密钥、地址以及模型名称
 ALLOW_ORIGINS = os.getenv("ALLOW_ORIGINS", "*")
 
