@@ -8,11 +8,6 @@
 
 </div>
 
-<div>
-<h3 style="color: #FF9909"> 特别说明：对于不太会部署，只是希望使用上最强 DeepClaude 组合的朋友，可以直接访问 Erlich 个人网站自助购买按量付费的 API：https://erlich.fun/deepclaude-pricing
-也可以直接联系 Erlich（微信：geekthings）国内可以直接访问 </h3>
-</div>
-
 ---
 
 <details>
@@ -61,26 +56,6 @@
 - [Star History](#star-history)
 - [Buy me a coffee](#buy-me-a-coffee)
 - [About Me](#about-me)
-
-# Introduction
-最近 DeepSeek 推出了 [DeepSeek R1 模型](https://platform.deepseek.com)，在推理能力上已经达到了第一梯队。但是 DeepSeek R1 在一些日常任务的输出上可能仍然无法匹敌 Claude 3.5 Sonnet。Aider 团队最近有一篇研究，表示通过[采用 DeepSeek R1 + Claude 3.5 Sonnet 可以实现最好的效果](https://aider.chat/2025/01/24/r1-sonnet.html)。
-
-<img src="https://img.erlich.fun/personal-blog/uPic/heiQYX.png" alt="deepseek r1 and sonnet benchmark" style="width=400px;"/>
-
-> **R1 as architect with Sonnet as editor has set a new SOTA of 64.0%** on the [aider polyglot benchmark](https://aider.chat/2024/12/21/polyglot.html). They achieve this at **14X less cost** compared to the previous o1 SOTA result.
-
-并且 Aider 还 [开源了 Demo](https://github.com/getasterisk/deepclaude)，你可以直接在他们的项目上进行在线体验。
-
-
-
-本项目受到该项目的启发，通过 fastAPI 完全重写，并支持 OpenAI 兼容格式，支持 DeepSeek 官方 API 以及第三方托管的 API。
-
-用户可以自行运行在自己的服务器，并对外提供开放 API 接口，接入 [OneAPI](https://github.com/songquanpeng/one-api) 等实现统一分发（token 消耗部分仍需开发）。也可以接入你的日常 ChatBox  软件以及 接入 [Cursor](https://www.cursor.com/) 等软件实现更好的编程效果（Claude 的流式输出+ Tool use 仍需开发）。
-
-# Implementation
-⚠️Notice: 目前只支持流式输出模式（因为这是效率最高的模式，不会浪费时间）；接下来会实现第一段 DeepSeek 推理阶段流式，Claude 输出非流式的模式（处于节省时间的考虑）。
-
-![image-20250201212456050](https://img.erlich.fun/personal-blog/uPic/image-20250201212456050.png)
 
 # How to run
 
@@ -267,14 +242,3 @@ Step 6. 配置程序到你的 Chatbox（推荐 [NextChat](https://nextchat.dev/)
 - [FastAPI](https://fastapi.tiangolo.com/)
 - [UV as package manager](https://docs.astral.sh/uv/#project-management)
 - [Docker](https://www.docker.com/)
-
-# Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=ErlichLiu/DeepClaude&type=Date)](https://star-history.com/#ErlichLiu/DeepClaude&Date)
-
-# Buy me a coffee
-<img src="https://img.erlich.fun/personal-blog/uPic/IMG_3625.JPG" alt="微信赞赏码" style="width: 400px;"/>
-
-# About Me
-- Email: erlichliu@gmail.com
-- Website: [Erlichliu](https://erlich.fun)
